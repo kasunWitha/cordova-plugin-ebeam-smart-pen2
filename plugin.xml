@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-ebeam-smart-pen" version="1.0.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>EbeamSmartpen</name>
+    <js-module name="EbeamSmartpen" src="www/EbeamSmartpen.js">
+        <clobbers target="EbeamSmartpen" />
+    </js-module>
+    <platform name="android">
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.BLUETOOTH"/>
+            <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+            <application>
+                <service android:name="com.luidia.ebeam.pen.sdk.UartService" android:enabled="true"/>
+            </application>
+        </config-file>
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="EbeamSmartpen">
+                <param name="android-package" value="cordova.plugin.ebeam.smart.pen.EbeamSmartpen" />
+            </feature>
+        </config-file>
+       <config-file parent="/*" target="AndroidManifest.xml" />
+        <source-file src="src/android/EbeamSmartpen.java" target-dir="src/cordova/plugin/ebeam/smart/pen/EbeamSmartpen" />
+        <source-file src="aar/classes.jar" target-dir="libs" />
+    </platform>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="EbeamSmartpen">
+                <param name="ios-package" value="EbeamSmartpen" />
+            </feature>
+        </config-file>
+        <source-file src="src/ios/EbeamSmartpen.m" />
+    </platform>
+</plugin>

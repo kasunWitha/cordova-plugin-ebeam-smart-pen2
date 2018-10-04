@@ -1,0 +1,23 @@
+{
+  "name": "ebeamsmartpen",
+  "version": "1.0.0",
+  "description": "This plugin can be used to access ebeam smartpen from ionic app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cordova",
+    "ebeam",
+    "smart",
+    "pen",
+    "smatpen",
+    "ionic"
+  ],
+  "author": "Kasun Withana",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kasunWitha/cordova-plugin-ebeam-smart-pen.git"
+  }
+}
