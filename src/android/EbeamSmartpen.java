@@ -7,7 +7,12 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.luidia.ebeam.pen.sdk.*;
+import com.luidia.ebeam.pen.sdk.EBeamSPController;
+import com.luidia.ebeam.pen.sdk.constants.PenEvent;
+import com.luidia.ebeam.pen.sdk.constants.PenMessage;
+import com.luidia.ebeam.pen.sdk.listener.PenEventListener;
+import com.luidia.ebeam.pen.sdk.listener.PenMessageListener;
+
 
 
 import android.content.Context;
