@@ -7,16 +7,14 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.luidia.ebeam.pen.sdk.EBeamSPController;
-import com.luidia.ebeam.pen.sdk.constants.PenEvent;
-import com.luidia.ebeam.pen.sdk.constants.PenMessage;
-import com.luidia.ebeam.pen.sdk.listener.PenEventListener;
-import com.luidia.ebeam.pen.sdk.listener.PenMessageListener;
+import com.luidia.ebeam.pen.sdk.*;
 
+import android.content.Context;
+import org.apache.cordova.*;
 /**
  * This class echoes a string called from JavaScript.
  */
-public class EbeamSmartpen extends CordovaPlugin {
+public class EbeamSmartpen extends CordovaPlugin implements PenMessageListener, PenEventListener {
 
     private EBeamSPController penController;
     private CordovaWebView web;
