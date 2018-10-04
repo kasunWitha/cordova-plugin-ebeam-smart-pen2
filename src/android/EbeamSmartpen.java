@@ -9,6 +9,7 @@ import org.json.JSONObject;
 
 import com.luidia.ebeam.pen.sdk.*;
 
+
 import android.content.Context;
 import org.apache.cordova.*;
 /**
