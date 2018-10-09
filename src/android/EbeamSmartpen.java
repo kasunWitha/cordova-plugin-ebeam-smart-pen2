@@ -13,7 +13,7 @@ import com.luidia.ebeam.pen.sdk.constants.PenMessage;
 import com.luidia.ebeam.pen.sdk.listener.PenEventListener;
 import com.luidia.ebeam.pen.sdk.listener.PenMessageListener;
 
-
+import android.util.Log;
 
 import android.content.Context;
 import org.apache.cordova.*;
