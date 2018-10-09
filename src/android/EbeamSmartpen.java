@@ -28,10 +28,12 @@ public class EbeamSmartpen extends CordovaPlugin implements PenMessageListener, 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("create")) {
+            Log.d("PluginPen", "IN create method");
             //String message = args.getString(0);
             this.create(callbackContext);
             return true;
         }else if (action.equals("isPenMode")) {
+            Log.d("PluginPen", "IN isPenMode method");
             this.isPenMode(callbackContext);
             return true;
         }else if (action.equals("connect")) {
@@ -112,11 +114,11 @@ public class EbeamSmartpen extends CordovaPlugin implements PenMessageListener, 
         this.web = webView;
 
         Context context = cordova.getActivity().getApplicationContext();
-        EBeamSPController.create(context);
-        penController =EBeamSPController.getInstance();
+        //EBeamSPController.create(context);
+        //penController =EBeamSPController.getInstance();
 
-        penController.setPenMessageListener(this);
-        penController.setPenEventListener(this);
+        //penController.setPenMessageListener(this);
+        //penController.setPenEventListener(this);
     }
 
 
