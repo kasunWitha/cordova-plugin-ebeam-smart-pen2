@@ -8,6 +8,10 @@
     </js-module>
     <platform name="android">
         <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+            <uses-permission android:name="android.permission.GET_TASK"/>
+            <uses-permission android:name="android.permission.WAKE_LOCK"/>
             <uses-permission android:name="android.permission.BLUETOOTH"/>
             <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
             <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
