@@ -12,9 +12,9 @@
             <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
             <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
             <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-            <application>
-                <service android:name="com.luidia.ebeam.pen.sdk.UartService" android:enabled="true"/>
-            </application>
+           <!--  <application>
+               <service android:name="com.luidia.ebeam.pen.sdk.UartService" android:enabled="true"/>
+            </application>-->
         </config-file>
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="EbeamSmartpen">
