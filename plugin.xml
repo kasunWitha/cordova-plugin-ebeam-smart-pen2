@@ -24,12 +24,12 @@
        <config-file parent="/*" target="AndroidManifest.xml" />
         <source-file src="src/android/EbeamSmartpen.java" target-dir="src/cordova/plugin/ebeam/smart/pen/EbeamSmartpen" />
         <source-file src="aar/classes.jar" target-dir="libs" />
-<<<<<<< HEAD
+
         <source-file src="aar/android-support-v4.jar" target-dir="libs" />
         <framework src="com.android.support:support-core-utils:26+" />
-=======
+
         <!---<lib-file src="aar/android-support-v4.jar" />-->
->>>>>>> d1b94953a06eef9943eb9c550a4a7df5bff86d65
+
     </platform>
     <platform name="ios">
         <config-file parent="/*" target="config.xml">
