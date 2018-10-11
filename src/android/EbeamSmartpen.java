@@ -52,7 +52,7 @@ public class EbeamSmartpen extends CordovaPlugin implements PenMessageListener, 
 
     private void create(CallbackContext callbackContext) {
          Log.d("PenControl", "create merhod");
-         Log.d("call back context" , callbackContext);
+         Log.d("call back context" , callbackContext.toString());
         
         callbackContext.success("true");
     }
