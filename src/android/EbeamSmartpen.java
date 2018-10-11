@@ -118,7 +118,7 @@ public class EbeamSmartpen extends CordovaPlugin implements PenMessageListener, 
         Context context = cordova.getActivity().getApplicationContext();
         Log.d("","&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
         Log.d("Contextlog", context.toString());
-        EBeamSPController.create(context);
+        EBeamSPController.create(this);
         Log.d("","111111111111111111111111111");
         penController =EBeamSPController.getInstance();
         Log.d("PenControl", "2 initialise");
