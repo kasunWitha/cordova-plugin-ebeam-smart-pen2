@@ -51,7 +51,7 @@ public class EbeamSmartpen extends CordovaPlugin implements PenMessageListener, 
     }
 
     private void create(CallbackContext callbackContext) {
-       
+         Log.d("PenControl", "create merhod");
         
         callbackContext.success("true");
     }
@@ -110,13 +110,14 @@ public class EbeamSmartpen extends CordovaPlugin implements PenMessageListener, 
 
     @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView){
+        Log.d("PenControl", "initialise");
         super.initialize(cordova, webView);
         this.web = webView;
-
+        Log.d("PenControl", " 2 initialise");
         Context context = cordova.getActivity().getApplicationContext();
         EBeamSPController.create(context);
         penController =EBeamSPController.getInstance();
-
+        Log.d("PenControl", "2 initialise");
         penController.setPenMessageListener(this);
         penController.setPenEventListener(this);
     }
