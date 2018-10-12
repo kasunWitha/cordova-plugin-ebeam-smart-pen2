@@ -24,7 +24,9 @@ public class EbeamSmartpen extends CordovaPlugin implements PenMessageListener, 
 
     private EBeamSPController penController;
     private CordovaWebView web;
-
+    Context context;
+    //CordovaInterface cordova;
+    
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("create")) {
@@ -51,7 +53,15 @@ public class EbeamSmartpen extends CordovaPlugin implements PenMessageListener, 
     }
 
     private void create(CallbackContext callbackContext) {
-       
+         Log.d("PenControl", "create merhod");
+         Log.d("call back context" , callbackContext.toString());
+         EBeamSPController.create(context);
+         Log.d("","111111111111111111111111111");
+         penController =EBeamSPController.getInstance();
+         Log.d("PenControl", "3 initialise");
+         penController.setPenMessageListener(this);
+         penController.setPenEventListener(this);
+
         
         callbackContext.success("true");
     }
@@ -110,15 +120,19 @@ public class EbeamSmartpen extends CordovaPlugin implements PenMessageListener, 
 
     @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView){
+        Log.d("PenControl", "initialise");
         super.initialize(cordova, webView);
         this.web = webView;
-
-        Context context = cordova.getActivity().getApplicationContext();
-        EBeamSPController.create(context);
+        Log.d("PenControl", " 2 initialise");
+        context = cordova.getActivity().getApplicationContext();
+        Log.d("","&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
+        Log.d("Contextlog", context.toString());
+        /* EBeamSPController.create(context);
+        Log.d("","111111111111111111111111111");
         penController =EBeamSPController.getInstance();
-
+        Log.d("PenControl", "3 initialise");
         penController.setPenMessageListener(this);
-        penController.setPenEventListener(this);
+        penController.setPenEventListener(this); */
     }
 
 
